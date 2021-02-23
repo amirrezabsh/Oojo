@@ -1,0 +1,80 @@
+::ng-deep .mat-form-field-placeholder {
+    color: white;
+}
+
+.home {
+    padding-top: 60px;
+    height: 100%;
+}
+.introduction {
+    justify-content: space-evenly;
+    display: flex;
+    background-color: rgb(6, 153, 205);
+    // opacity:س 0.9;
+    padding: 10%;
+    direction: rtl;
+}
+mat-form-field.mat-form-field {
+    font-size: 16px;
+    color: white;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: white !important;
+}
+.introduction-title {
+    font-family: "Sahel-Black";
+    color: white;
+    font-size: 45px;
+    line-height: 60px;
+}
+.introduction-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.introduction-right-part {
+    width: 40%;
+    text-align: center;
+    padding-top: 30px;
+}
+.introduction-subtitle {
+    direction: rtl;
+    text-align: right;
+    font-family: "Sahel";
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+}
+.languages {
+    justify-content: center;
+    direction: rtl;
+    text-align: right;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+    top: -80px;
+    left: 9%;
+    padding: 20px 10px;
+    position: absolute;
+}
+.language-button {
+    padding: 16px;
+    border-radius: 16px;
+}
+.table-subtitle {
+    font-family: "Sahel";
+    text-align: center;
+    padding: 0 20px;
+    direction: rtl;
+}
+.table-title {
+    font-family: "Sahel-Bold";
+    margin-bottom: 0;
+}

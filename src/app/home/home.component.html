@@ -1,0 +1,115 @@
+<app-header></app-header>
+<div class="home">
+    <div class="introduction">
+        <div class="introduction-right-part">
+            <h1 class="introduction-title">با یک معلم خصوصی <br> یک زبان جدید یاد بگیر</h1>
+            <p class="introduction-subtitle">از بین هزاران استاد زبان بر استاد خصوصی مورد نظرتان را انتخاب کنید.</p>
+            <div dir="rtl" style="width: 100%;height: fit-content;">
+                <mat-form-field
+                    style="text-align: right; width: 80%;margin: auto;padding-bottom: 0;height: fit-content;"
+                    appearance="outline">
+                    <input style="font-family: 'Sahel';" [formControl]="myControl" [matAutocomplete]="auto" matInput
+                        placeholder="در حال یادگیری ...">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option style="font-family: 'Sahel';" *ngFor="let option of languages | async"
+                            [value]="option">
+                            <div style="display: flex;">
+                                <img width="30px" style="object-fit: contain;margin: auto 0;margin-left: 10px;"
+                                    src="assets/svg/{{option}}.svg">
+                                {{option}}
+                            </div>
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <button mat-button
+                    style="font-family: 'Sahel-Bold';color: white;width: 80%;border: 2px solid white;border-radius: 5px;margin-top: -10px;">رزرو
+                    کلاس</button>
+            </div>
+        </div>
+        <img class="introduction-image" src="assets/images/introduction.png">
+    </div>
+    <div style="background-color: rgb(236, 249, 254);position: relative;">
+        <div class="languages">
+            <h1 style="font-family: 'Sahel-Bold';">می خواهم این زبان را یاد بگیرم ...</h1>
+            <div style="display: flex;flex-wrap: wrap;text-align: center;justify-content: center;">
+                <button mat-button class="language-button">
+                    <div style="text-align: center;">
+                        <img width="50px" height="50px" style="object-fit: contain;" src="assets/svg/عربی.svg">
+                        <p style="font-family: 'Sahel-Bold';margin-bottom: 0;">عربی</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: rgb(236, 249, 254);padding: 250px 16px;text-align: center;">
+        <h1 style="font-family: 'Sahel-Bold';font-size: 24px;">استادان حرفه ای، برای همه ی زبان ها</h1>
+        <table style="text-align: center;width: 100%;padding: 10px 10%;table-layout: fixed;">
+            <tr style="text-align: center;">
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/teachers.svg">
+                    <h3 class="table-title">استادان حرفه ای</h3>
+                </th>
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/platform.svg">
+                    <h3 class="table-title">بستر یکپارچه</h3>
+                </th>
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/tools.svg">
+                    <h3 class="table-title">ابزار زبان</h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p class="table-subtitle">
+                        ما برایتان یافتن اساتید 5 ستاره را آسان می کنیم تا بتوانید به راحتی زبان بیاموزید.
+                    </p>
+                </td>
+                <td>
+                    <p class="table-subtitle">
+                        زمان بندی کردن درس هایتان و دیدار با استادتان همگی در پنجره ی مرورگرتان.
+                    </p>
+                </td>
+                <td>
+                    <p class="table-subtitle">
+                        با استفاده از بهترین ابزار ها زبان بیاموزید.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table style="text-align: center;width: 100%;padding: 10px 10%;table-layout: fixed;">
+            <tr style="text-align: center;">
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/multidevice.svg">
+                    <h3 class="table-title">استادان حرفه ای</h3>
+                </th>
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/platform.svg">
+                    <h3 class="table-title">بستر یکپارچه</h3>
+                </th>
+                <th style="text-align: center;">
+                    <img width="50px" height="50px" src="assets/svg/tools.svg">
+                    <h3 class="table-title">ابزار زبان</h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p class="table-subtitle">
+                        ما برایتان یافتن اساتید 5 ستاره را آسان می کنیم تا بتوانید به راحتی زبان بیاموزید.
+                    </p>
+                </td>
+                <td>
+                    <p class="table-subtitle">
+                        زمان بندی کردن درس هایتان و دیدار با استادتان همگی در پنجره ی مرورگرتان.
+                    </p>
+                </td>
+                <td>
+                    <p class="table-subtitle">
+                        با استفاده از بهترین ابزار ها زبان بیاموزید.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <app-footer></app-footer>
+
+</div>

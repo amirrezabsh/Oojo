@@ -1,0 +1,44 @@
+.whole-header{
+    background-color:rgb(6, 153, 205);
+    direction: rtl;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;
+}
+.change-color{
+    background-color: white !important;
+    transition: background-color 0.5s ease;
+    opacity:0.9;
+}
+.change-text-color{
+    color: rgb(6, 153, 205) !important;
+}
+
+.right-part{
+    display: flex;
+}
+.logo-title{
+    margin: auto;
+    padding: 0 20px;
+    color: white;
+}
+.logo{
+    margin: auto;
+}
+.normal-button{
+    margin: auto;
+    color: white;
+    font-family: 'Sahel';
+    border-radius: 12px;
+}
+.left-part{
+    display: flex;
+}
+.header-button{
+    margin: auto;
+}

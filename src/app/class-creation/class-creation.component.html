@@ -1,0 +1,108 @@
+<header>ساخت کلاس</header>
+
+<body>
+    <div style="text-align: center;">
+        <div style="display: flex;">
+            <mat-form-field appearance="fill" style="text-align: right;">
+                <mat-label>نوع زبان</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let language of languages" [value]="language" style="text-align: right;">
+                        {{language}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <form style="margin-left: 10px;">
+                <mat-form-field style="text-align: right;">
+                    <mat-label>نام کلاس</mat-label>
+                    <input matInput type="text" style="text-align: right;">
+                </mat-form-field>
+            </form>
+        </div>
+        <div style="display: flex;">
+            <form style="margin-right: 10px;">
+                <mat-form-field style="text-align: right;">
+                    <mat-label>تعداد نفرات</mat-label>
+                    <input matInput type="number" min="0" style="text-align: right;">
+                </mat-form-field>
+            </form>
+            <mat-form-field appearance="fill" style="text-align: right;">
+                <mat-label>نوع کلاس</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let type of types" [value]="type" style="text-align: right;">
+                        {{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div style="display: flex;">
+            <form style="margin-right: 10px;">
+                <mat-form-field style="text-align: right;">
+                    <mat-label>تعداد جلسات</mat-label>
+                    <input matInput type="number" min="0" style="text-align: right">
+                </mat-form-field>
+            </form>
+            <mat-form-field appearance="fill" style="text-align: right;">
+                <mat-label>مدت زمان هر جلسه</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let time of times" [value]="time" style="text-align: right;direction: rtl;">
+                        {{time}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <h3>جلسه</h3>
+                <h3 *ngFor="let temp of tmp|slice:0:5;let i=index">{{i}}</h3>
+            </div>
+            <div style="margin-left: 10px;">
+                <h3>تاریخ</h3>
+                <div *ngFor="let temp of tmp|slice:0:5;let i=index">
+                    <form>
+                        <mat-form-field style="text-align: right;">
+                            <mat-label>تقویم</mat-label>
+                            <input matInput type="text" style="text-align: right" #datepickerInput>
+                        </mat-form-field>
+                    </form>
+                    <ng-persian-datepicker [input]="datepickerInput" [dateInitValue]="true" [timeEnable]="false">
+                    </ng-persian-datepicker>
+                </div>
+            </div>
+            <div>
+                <h3>ساعت</h3>
+                <div *ngFor="let temp of tmp|slice:0:5;let i=index">
+                    <mat-form-field appearance="fill" style="text-align: right;">
+                        <mat-select>
+                            <mat-option *ngFor="let hour of hours" [value]="hour"
+                                style="text-align: right;direction: rtl;">
+                                {{hour}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <br>
+                <div *ngFor="let temp of tmp|slice:0:5;">
+                    <strong>:</strong>
+                </div>
+            </div>
+            <div>
+                <h3>دقیقه</h3>
+                <div *ngFor="let temp of tmp|slice:0:5;let i=index">
+                    <mat-form-field appearance="fill" style="text-align: right;">
+                        <mat-select>
+                            <mat-option *ngFor="let minute of minutes" [value]="minute"
+                                style="text-align: right;direction: rtl;">
+                                {{minute}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary">ایجاد</button>
+        </div>
+    </div>
+</body>
