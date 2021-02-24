@@ -31,11 +31,11 @@
     <div style="background-color: rgb(236, 249, 254);position: relative;">
         <div class="languages">
             <h1 style="font-family: 'Sahel-Bold';">می خواهم این زبان را یاد بگیرم ...</h1>
-            <div style="display: flex;flex-wrap: wrap;text-align: center;justify-content: center;">
-                <button mat-button class="language-button">
+            <div style="display: flex;flex-wrap: wrap;text-align: center;justify-content: center;" >
+                <button mat-button class="language-button" *ngFor="let option of options">
                     <div style="text-align: center;">
-                        <img width="50px" height="50px" style="object-fit: contain;" src="assets/svg/عربی.svg">
-                        <p style="font-family: 'Sahel-Bold';margin-bottom: 0;">عربی</p>
+                        <img width="50px" height="50px" style="object-fit: contain;" src="assets/svg/{{option}}.svg">
+                        <p style="font-family: 'Sahel-Bold';margin-bottom: 0;">{{option}}</p>
                     </div>
                 </button>
             </div>
@@ -80,31 +80,31 @@
             <tr style="text-align: center;">
                 <th style="text-align: center;">
                     <img width="50px" height="50px" src="assets/svg/multidevice.svg">
-                    <h3 class="table-title">استادان حرفه ای</h3>
+                    <h3 class="table-title">پشتیبانی چند دستگاه</h3>
                 </th>
                 <th style="text-align: center;">
-                    <img width="50px" height="50px" src="assets/svg/platform.svg">
-                    <h3 class="table-title">بستر یکپارچه</h3>
+                    <img width="50px" height="50px" src="assets/svg/dart.svg">
+                    <h3 class="table-title">تحصیل شخصی</h3>
                 </th>
                 <th style="text-align: center;">
-                    <img width="50px" height="50px" src="assets/svg/tools.svg">
-                    <h3 class="table-title">ابزار زبان</h3>
+                    <img width="50px" height="50px" src="assets/svg/hand.svg">
+                    <h3 class="table-title">جامعه ی جهانی</h3>
                 </th>
             </tr>
             <tr>
                 <td>
                     <p class="table-subtitle">
-                        ما برایتان یافتن اساتید 5 ستاره را آسان می کنیم تا بتوانید به راحتی زبان بیاموزید.
+                        به اُجو از طریق مرورگر لپ تاپتان یا موبایلتان با هر سیستم عاملی دسترسی یابید.
                     </p>
                 </td>
                 <td>
                     <p class="table-subtitle">
-                        زمان بندی کردن درس هایتان و دیدار با استادتان همگی در پنجره ی مرورگرتان.
+                        با استفاده از برنامه های آموزشی پیشرفت کنید و یا از استادتان درخواست کنید بر اساس نیاز هایتان به شما برنامه ی آموزشی بدهد.
                     </p>
                 </td>
                 <td>
                     <p class="table-subtitle">
-                        با استفاده از بهترین ابزار ها زبان بیاموزید.
+                        به جامعه ای از زبان آموزان جهانی وارد شوید که عاشق استفاده از اُجو هستند.
                     </p>
                 </td>
             </tr>
